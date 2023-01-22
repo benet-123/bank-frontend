@@ -1,0 +1,71 @@
+<div class="container">
+
+<div class="text-center mt-5" [ngClass]="acno? 'style1':''"><h3>Welcome {{user}}</h3></div>
+<div class="text-center"><a href="" routerLink="/transaction"  style="text-decoration: none; ">View  Transaction History</a></div>
+
+<h5>Date and time:{{sdate | date:'short'}}</h5>
+
+<app-delete [item]="acno" (onCancel)="onCancel()"></app-delete>
+
+
+
+<div class="row content" [ngClass]="acno? 'style1':''">
+        <div class="col-md-6 mb-3" >
+        <img src="..//../assets/deposit.webp" alt="">
+        </div>
+        <div class="col-md-6" >
+<form  [formGroup]="dashboard1" (ngSubmit)="deposit()">
+    <h2>Deposit Form</h2>
+    <label for="">Account Number</label>
+    <input  formControlName="account1" name="account" type="text" class="form-control mt-2 " placeholder="Enter your account number" >
+    <div *ngIf="this.dashboard1.get('account1')?.errors && this.dashboard1.get('account1')?.touched"><p class="text-danger">Invalid Account Number</p></div>
+    
+<label for="" class="mt-2">Password</label>
+<input formControlName="password1" name="password" type="text" class="form-control mt-2" placeholder="Enter your password">
+<div *ngIf="this.dashboard1.get('password1')?.errors && this.dashboard1.get('password1')?.touched"><p class="text-danger">Invalid Password</p></div>
+<label for="" class="mt-2">Cash</label>
+<input formControlName="amount1" name="amount" type="text" class="form-control mt-2" placeholder="Enter the amount">
+<div *ngIf="this.dashboard1.get('amount1')?.errors && this.dashboard1.get('amount1')?.touched"><p class="text-danger">Enter Correct amount</p></div>
+<div class="text-center">
+    <button type="submit" class="btn btn-outline-success mt-3">DEPOSIT</button>
+
+</div>   
+</form>
+        </div>
+    </div>
+
+    <div class="row content" [ngClass]="acno? 'style1':''">
+        <div class="col-md-6 mb-3">
+        <img src="..//../assets/withdrawal.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+<form [formGroup]="dashboard2"  (ngSubmit)="withdraw()">
+    <h2>Withdraw Form</h2>
+    <label for="">Account Number</label>
+<input  formControlName="account2" name="account1" type="text" class="form-control mt-2 " placeholder="Enter your account number" >
+<div *ngIf="this.dashboard2.get('account2')?.errors && this.dashboard2.get('account2')?.touched"><p class="text-danger">Invalid Account Number</p></div>
+<label for="" class="mt-2">Password</label>
+<input formControlName="password2" name="password2" type="text" class="form-control mt-2" placeholder="Enter your Password">
+<div *ngIf="this.dashboard2.get('password2')?.errors && this.dashboard2.get('password2')?.touched"><p class="text-danger">Invalid Password</p></div>
+
+<label for="" class="mt-2">Cash</label>
+<input  formControlName="amount2" name="amount1" type="text" class="form-control mt-2" placeholder="Enter the amount">
+<div *ngIf="this.dashboard2.get('amount2')?.errors && this.dashboard2.get('amount2')?.touched"><p class="text-danger">Enter Correct amount</p></div>
+
+<div class="text-center">
+    <button type="submit" class="btn btn-outline-success mt-3">WITHDRAW</button>
+
+</div>   </form>
+        </div>
+
+    </div>
+<div class="text-center ">
+      <button style="border-radius: 50px; " (click)="logout()" type="submit" class="btn btn-outline-warning text-black fs-5 mb-5 w-50">Log out</button>
+
+</div>  
+<div class="text-center ">
+    <button style="border-radius: 50px; " (click)="delete()" type="submit" class="btn btn-outline-danger text-black fs-5 mb-5 w-50">Delete</button>
+
+</div>  
+
+</div>

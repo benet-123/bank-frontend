@@ -1,0 +1,22 @@
+<section >
+    <div class="text-center mt-5"><h1>{{aim}}</h1></div>
+    <div class="container mt-5">
+        <div class="row " >
+            <div class="col-lg-5 " id="box1 ">
+            </div>
+            <div class="col-lg-7 " id="box" >
+                <form [formGroup]="loginform" (ngSubmit)="login()" >
+                    <h2 >Login to your Account</h2>
+                    <label for="" class="mt-2 ">Account Number</label>
+                    <input   formControlName="accountnumber" [placeholder]="data" name="acno" style="border: none;" type="text"  class="form-control w-50 mt-2">
+                    <div *ngIf="this.loginform.get('accountnumber')?.errors && this.loginform.get('accountnumber')?.touched"><p class="text-danger">Invalid Account Number</p></div>
+                    <label for="" class="mt-2 ">Password</label>
+                    <input  formControlName="password"  id="psw" [placeholder]="data1" name="psw" style="border: none;" type="text"  class="form-control w-50 mt-2">
+                   <div *ngIf="this.loginform.get('password')?.errors && this.loginform.get('password')?.touched"><p class="text-danger">Invalid password</p></div>
+                    <button type="submit"  class="btn btn-outline-success mt-3">LOGIN</button>
+                    <div class="mt-2 mb-5 fs-5" >New user?<a routerLink="register" style="text-decoration: none; ;">&nbsp; Register</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

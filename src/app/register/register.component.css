@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Qwitcher+Grypen&family=Slabo+27px&display=swap');
+
+#main{
+    border: 2px solid gainsboro;
+    padding: 30px 20px;
+    -webkit-box-shadow: 7px 9px 17px 1px rgba(65,87,50,1);
+-moz-box-shadow: 7px 9px 17px 1px rgba(65,87,50,1);
+box-shadow: 7px 9px 17px 1px #0a0b08;
+margin-top: 50px;
+}
+h1{
+    font-family: 'Slabo 27px', serif;
+    font-size: 50px;
+    font-weight: 600;
+
+}
+img{
+    width:150px;
+    border-radius: 150px;
+    border: none;
+}
+label{
+    font-size:18px;
+    color:black;
+    font-weight: 600;
+
+}
+#main input:hover{
+    box-shadow: 2px 2px 5px rgb(22, 19, 19);
+cursor: pointer;
+}
+@media(max-width:500px ){
+    #main{
+        padding:20px 20px;
+    }
+    label{
+        font-size:15px;
+    }
+    img{
+        width: 120px;
+    }
+    h1{
+        font-size: 35px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+   <div class="row">
+     <div class="col-md-4 sm-4 xs-12"></div>
+     <div class="col-md-4 sm-4 xs-12">
+      <form [formGroup]="registerform" id="main" (ngSubmit)="register()">
+         <h1 class="text-center">Register &nbsp;Now</h1>
+<div class="text-center">
+            <img   src="..//../assets/user.gif" alt=""> <br>
+
+</div> 
+          <label for="">Username</label>
+         <input formControlName="uname" name="Username" placeholder="Enter Username " type="text" class="form-control">
+         <div *ngIf="this.registerform.get('uname')?.errors && this.registerform.get('uname')?.touched"><p class="text-danger">Invalid Username</p></div>
+         <label for="">Account Number</label>
+         <input formControlName="acno" name="accountnumber"  placeholder="Enter Account Number" type="text" class="form-control">
+<div *ngIf="this.registerform.get('acno')?.errors && this.registerform.get('acno')?.touched"><p class="text-danger">Invalid Account number</p></div>
+         
+
+
+<label for="">Password</label>
+         <input formControlName="psw" name="password" placeholder="Enter Password" type="text" class="form-control">
+         <div *ngIf="this.registerform.get('psw')?.errors && this.registerform.get('psw')?.touched"><p class="text-danger">Invalid Password</p></div>
+
+         <div class="text-center">
+   <button  class="btn btn-outline-success mt-2">REGISTER</button>
+
+</div>       </form>
+     </div>
+     <div class="col-md-4 sm-4 xs-12"></div>
+   </div>
+</div>

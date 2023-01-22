@@ -1,0 +1,17 @@
+ <div class="text-center mt-5"><h2>Transaction History</h2></div>
+<section>
+    <table class="table">
+        
+        <thead>
+            <th class="text-center border " >Type</th>
+            <th class="text-center border ">Amount</th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let i of transactions">
+                <td class="text-center border bg-light ">{{i.type}}</td>
+                <td class="text-center border " >{{i.amount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+

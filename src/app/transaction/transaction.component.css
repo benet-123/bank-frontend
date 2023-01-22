@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Lobster&family=Lora&family=Pacifico&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Lobster&family=Pacifico&display=swap');
+section{
+align-items: center;
+justify-content: center;
+display: flex;
+margin-top: 5%;
+}
+.table{
+    font-family: 'Lora', serif;
+    border-collapse: collapse;
+    width:75%;
+}
+h2{
+    font-family: 'Vidaloka', serif;
+    font-size: 35px;
+}
+
+
+th{
+    /* background-color: rgb(103, 160, 97); */
+    background-color: rgb(158, 207, 84);
+    color: white;
+    
+}
+th,td{
+    padding: 0.8rem;
+    font-size: 18px;
+}
+tbody{
+    background-color: #eee;
+    color:#555;
+}
+
+
+@media(max-width:500px){
+    .table{
+        width: 5%;
+        width: 90%;
+    }
+    section{
+        margin-top: 8%;
+    }
+    h2{
+        font-size: 30px;
+    }
+    th,td{
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+    margin-top: 10px;
+    padding:20px;
+    font-family: sans-serif;
+  
+}
+*{
+    box-sizing: border-box;
+   
+}
+.table{
+    width:100%;
+    border-collapse: collapse;
+}
+.table td,.table th{
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.table th{
+    background-color: aquamarine;
+color:black
+} */
